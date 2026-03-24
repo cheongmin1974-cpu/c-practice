@@ -8,6 +8,34 @@ LEN=길이
 SPACE=공백개수
 ALPHA=영문자개수
 
+<1번 답안>
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main() {
+    char line[100];
+    cin.getline(line, 100,'\n');
+
+    int spacecount = 0;
+    int alphaCount = 0;
+    int i = 0;
+    while (line[i] != '\0') {
+        if (line[i] == ' ') {
+            spacecount++;
+        }
+        else if ((line[i] >= 'a' && line[i] <= 'z') || (line[i] >= 'A' && line[i] <= 'Z')) {
+            alphaCount++;
+        }
+        i++; //검사가 끝났으니 다음칸으로
+    }
+    cout << "LEN=" << i << endl; //
+    cout << "SPACE=" << spacecount << endl;
+    cout << "ALPHA=" <<alphaCount << endl;
+
+}
+
 
 <2번>
 다음 조건을 만족하는 프로그램을 작성하시오.
