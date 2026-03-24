@@ -71,6 +71,39 @@ n
 [출력 예]
 -1
 
+<2번 정답>
+#include <iostream>
+using namespace std;
+
+namespace A {
+    int f() {
+        return 1;
+    }
+
+}
+namespace B {
+    int f() {
+        return -1;
+    }
+}
+int main() {
+    int n;
+    cin >> n;
+
+
+
+    if (n == 0) {
+        cout << 0 << endl;
+    }
+    else if (n>0) {
+        cout << A::f() << endl;
+    }
+    else if (n<0) {
+        cout << B::f() << endl;
+    }
+    return 0;
+}
+
 <3번>
 [문제]
 
